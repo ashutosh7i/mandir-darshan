@@ -1,0 +1,151 @@
+[
+  {
+    "id": 1,
+    "name": "somnath",
+    "liveUrl": "https://www.youtube.com/embed/FepTTW5RmYA",
+    "fallbackUrl":"",
+    "aartiTimings": ["05:30", "12:30", "20:00"],
+    "templeInfo": {
+      "description": "The Kashi Vishwanath (Vishweshwar) Temple in Varanasi, Uttar Pradesh is home to the Vishwanath Jyotirlinga shrine, which is perhaps the most sacred of Hindu shrines. It is also one of the Padal petra stalam of Vada Naadu mentioned in Thevaaram. The temple is situated in Varanasi, the holiest city for Hindus, where a Hindu is expected to make a pilgrimage at least once in his life, and if possible, also pour the remains of cremated ancestors on the River Ganges. The temple stands on the western bank of the holy river Ganges, and is one of the twelve jyotirlingas. In fact, it is a place where Shakti peeta and jyotirlingam are together. It is the holiest of all Shiva temples. The main deity is known by the name Vishwanath or Vishweshwara meaning Ruler of the universe. The temple town, is considered the oldest living city in the world, with 3500 years of documented history, is also called Kashi.",
+      "officialWebsite": "https://somnath.org/",
+      "image": "somnath.png"
+    }
+  },
+
+  {
+    "id": 2,
+    "name": "mallikarjuna",
+    "liveUrl": "https://www.youtube.com/embed/FepTTW5RmYA",
+    "live": false,
+    "fallbackUrl":"",
+    "aartiTimings": ["05:30", "12:30", "20:00"],
+    "templeInfo": {
+      "description": "The Kashi Vishwanath (Vishweshwar) Temple in Varanasi, Uttar Pradesh is home to the Vishwanath Jyotirlinga shrine, which is perhaps the most sacred of Hindu shrines. It is also one of the Padal petra stalam of Vada Naadu mentioned in Thevaaram. The temple is situated in Varanasi, the holiest city for Hindus, where a Hindu is expected to make a pilgrimage at least once in his life, and if possible, also pour the remains of cremated ancestors on the River Ganges. The temple stands on the western bank of the holy river Ganges, and is one of the twelve jyotirlingas. In fact, it is a place where Shakti peeta and jyotirlingam are together. It is the holiest of all Shiva temples. The main deity is known by the name Vishwanath or Vishweshwara meaning Ruler of the universe. The temple town, is considered the oldest living city in the world, with 3500 years of documented history, is also called Kashi.",
+      "officialWebsite": "https://www.srisailadevasthanam.org/en-in/home",
+      "image": "mallikarnuja.png"
+    }
+  },
+  {
+    "id": 3,
+    "name": "mahakaal",
+    "liveUrl": "https://www.youtube.com/embed/inv6r8cBOU4",
+    "fallbackUrl":"",
+    "aartiTimings": ["05:30", "12:30", "20:00"],
+    "templeInfo": {
+      "description": "The Kashi Vishwanath (Vishweshwar) Temple in Varanasi, Uttar Pradesh is home to the Vishwanath Jyotirlinga shrine, which is perhaps the most sacred of Hindu shrines. It is also one of the Padal petra stalam of Vada Naadu mentioned in Thevaaram. The temple is situated in Varanasi, the holiest city for Hindus, where a Hindu is expected to make a pilgrimage at least once in his life, and if possible, also pour the remains of cremated ancestors on the River Ganges. The temple stands on the western bank of the holy river Ganges, and is one of the twelve jyotirlingas. In fact, it is a place where Shakti peeta and jyotirlingam are together. It is the holiest of all Shiva temples. The main deity is known by the name Vishwanath or Vishweshwara meaning Ruler of the universe. The temple town, is considered the oldest living city in the world, with 3500 years of documented history, is also called Kashi.",
+      "officialWebsite": "https://shrimahakaleshwar.com/",
+      "image":"mahakaleshwar.png"
+    }
+  },
+  {
+    "id": 4,
+    "name": "omkareshwar",
+    "liveUrl": "https://www.youtube.com/embed/pC4232_RIXI",
+    "live":false,
+    "fallbackUrl":"",
+    "aartiTimings": ["05:30", "12:30", "20:00"],
+    "templeInfo": {
+      "description": "The Kashi Vishwanath (Vishweshwar) Temple in Varanasi, Uttar Pradesh is home to the Vishwanath Jyotirlinga shrine, which is perhaps the most sacred of Hindu shrines. It is also one of the Padal petra stalam of Vada Naadu mentioned in Thevaaram. The temple is situated in Varanasi, the holiest city for Hindus, where a Hindu is expected to make a pilgrimage at least once in his life, and if possible, also pour the remains of cremated ancestors on the River Ganges. The temple stands on the western bank of the holy river Ganges, and is one of the twelve jyotirlingas. In fact, it is a place where Shakti peeta and jyotirlingam are together. It is the holiest of all Shiva temples. The main deity is known by the name Vishwanath or Vishweshwara meaning Ruler of the universe. The temple town, is considered the oldest living city in the world, with 3500 years of documented history, is also called Kashi.",
+      "officialWebsite": "https://shriomkareshwar.org/",
+      "image":"omkareshwar.png"
+    }
+  },
+  {
+    "id": 5,
+    "name": "baidyanath",
+    "liveUrl": "https://www.youtube.com/embed/Km6D72R8mFU",
+    "live":false,
+    "fallbackUrl":"",
+    "aartiTimings": ["05:30", "12:30", "20:00"],
+    "templeInfo": {
+      "description": "The Kashi Vishwanath (Vishweshwar) Temple in Varanasi, Uttar Pradesh is home to the Vishwanath Jyotirlinga shrine, which is perhaps the most sacred of Hindu shrines. It is also one of the Padal petra stalam of Vada Naadu mentioned in Thevaaram. The temple is situated in Varanasi, the holiest city for Hindus, where a Hindu is expected to make a pilgrimage at least once in his life, and if possible, also pour the remains of cremated ancestors on the River Ganges. The temple stands on the western bank of the holy river Ganges, and is one of the twelve jyotirlingas. In fact, it is a place where Shakti peeta and jyotirlingam are together. It is the holiest of all Shiva temples. The main deity is known by the name Vishwanath or Vishweshwara meaning Ruler of the universe. The temple town, is considered the oldest living city in the world, with 3500 years of documented history, is also called Kashi.",
+      "officialWebsite": "https://babadham.org/",
+      "image":"baidyanath.png"
+    }
+  },
+  {
+    "id": 6,
+    "name": "bhimashankar",
+    "liveUrl": "",
+    "fallbackUrl":"",
+    "aartiTimings": ["05:30", "12:30", "20:00"],
+    "templeInfo": {
+      "description": "The Kashi Vishwanath (Vishweshwar) Temple in Varanasi, Uttar Pradesh is home to the Vishwanath Jyotirlinga shrine, which is perhaps the most sacred of Hindu shrines. It is also one of the Padal petra stalam of Vada Naadu mentioned in Thevaaram. The temple is situated in Varanasi, the holiest city for Hindus, where a Hindu is expected to make a pilgrimage at least once in his life, and if possible, also pour the remains of cremated ancestors on the River Ganges. The temple stands on the western bank of the holy river Ganges, and is one of the twelve jyotirlingas. In fact, it is a place where Shakti peeta and jyotirlingam are together. It is the holiest of all Shiva temples. The main deity is known by the name Vishwanath or Vishweshwara meaning Ruler of the universe. The temple town, is considered the oldest living city in the world, with 3500 years of documented history, is also called Kashi.",
+      "officialWebsite": "",
+      "image":"bhimashankar.png"
+    }
+  },
+  {
+    "id": 7,
+    "name": "rameswaram",
+    "liveUrl": "false",
+    "live":false,
+    "fallbackUrl":"",
+    "aartiTimings": ["05:30", "12:30", "20:00"],
+    "templeInfo": {
+      "description": "The Kashi Vishwanath (Vishweshwar) Temple in Varanasi, Uttar Pradesh is home to the Vishwanath Jyotirlinga shrine, which is perhaps the most sacred of Hindu shrines. It is also one of the Padal petra stalam of Vada Naadu mentioned in Thevaaram. The temple is situated in Varanasi, the holiest city for Hindus, where a Hindu is expected to make a pilgrimage at least once in his life, and if possible, also pour the remains of cremated ancestors on the River Ganges. The temple stands on the western bank of the holy river Ganges, and is one of the twelve jyotirlingas. In fact, it is a place where Shakti peeta and jyotirlingam are together. It is the holiest of all Shiva temples. The main deity is known by the name Vishwanath or Vishweshwara meaning Ruler of the universe. The temple town, is considered the oldest living city in the world, with 3500 years of documented history, is also called Kashi.",
+      "officialWebsite": "https://rameswaramramanathar.hrce.tn.gov.in/",
+      "image":"rameswaram.png"
+    }
+  },
+  {
+    "id": 8,
+    "name": "nageshwar",
+    "liveUrl": "https://www.youtube.com/embed/m0tvrPFsvgk",
+    "fallbackUrl":"",
+    "aartiTimings": ["05:30", "12:30", "20:00"],
+    "templeInfo": {
+      "description": "The Kashi Vishwanath (Vishweshwar) Temple in Varanasi, Uttar Pradesh is home to the Vishwanath Jyotirlinga shrine, which is perhaps the most sacred of Hindu shrines. It is also one of the Padal petra stalam of Vada Naadu mentioned in Thevaaram. The temple is situated in Varanasi, the holiest city for Hindus, where a Hindu is expected to make a pilgrimage at least once in his life, and if possible, also pour the remains of cremated ancestors on the River Ganges. The temple stands on the western bank of the holy river Ganges, and is one of the twelve jyotirlingas. In fact, it is a place where Shakti peeta and jyotirlingam are together. It is the holiest of all Shiva temples. The main deity is known by the name Vishwanath or Vishweshwara meaning Ruler of the universe. The temple town, is considered the oldest living city in the world, with 3500 years of documented history, is also called Kashi.",
+      "officialWebsite": "https://devbhumidwarka.nic.in/tourist-place/nageshwar-temple/",
+      "image":"nageshwar.png"
+    }
+  },
+  {
+    "id": 9,
+    "name": "kashi",
+    "liveUrl": "https://www.youtube.com/embed/958GFoW4JHw",
+    "fallbackUrl":"",
+    "aartiTimings": ["05:30", "12:30", "20:00"],
+    "templeInfo": {
+      "description": "The Kashi Vishwanath (Vishweshwar) Temple in Varanasi, Uttar Pradesh is home to the Vishwanath Jyotirlinga shrine, which is perhaps the most sacred of Hindu shrines. It is also one of the Padal petra stalam of Vada Naadu mentioned in Thevaaram. The temple is situated in Varanasi, the holiest city for Hindus, where a Hindu is expected to make a pilgrimage at least once in his life, and if possible, also pour the remains of cremated ancestors on the River Ganges. The temple stands on the western bank of the holy river Ganges, and is one of the twelve jyotirlingas. In fact, it is a place where Shakti peeta and jyotirlingam are together. It is the holiest of all Shiva temples. The main deity is known by the name Vishwanath or Vishweshwara meaning Ruler of the universe. The temple town, is considered the oldest living city in the world, with 3500 years of documented history, is also called Kashi.",
+      "officialWebsite": "https://www.shrikashivishwanath.org",
+      "image":"kashi.png"
+    }
+  },
+  {
+    "id": 10,
+    "name": "trimbakeshwar",
+    "liveUrl": "https://g2.ipcamlive.com/ea396b13-76c4-4504-8ab9-134daa0b3001",
+    "fallbackUrl":"",
+    "aartiTimings": ["05:30", "12:30", "20:00"],
+    "templeInfo": {
+      "description": "The Kashi Vishwanath (Vishweshwar) Temple in Varanasi, Uttar Pradesh is home to the Vishwanath Jyotirlinga shrine, which is perhaps the most sacred of Hindu shrines. It is also one of the Padal petra stalam of Vada Naadu mentioned in Thevaaram. The temple is situated in Varanasi, the holiest city for Hindus, where a Hindu is expected to make a pilgrimage at least once in his life, and if possible, also pour the remains of cremated ancestors on the River Ganges. The temple stands on the western bank of the holy river Ganges, and is one of the twelve jyotirlingas. In fact, it is a place where Shakti peeta and jyotirlingam are together. It is the holiest of all Shiva temples. The main deity is known by the name Vishwanath or Vishweshwara meaning Ruler of the universe. The temple town, is considered the oldest living city in the world, with 3500 years of documented history, is also called Kashi.",
+      "officialWebsite": "https://trimbakeshwartrust.com/",
+      "image":"trimbakeshwar.png"
+    }
+  },
+  {
+    "id": 11,
+    "name": "kedarnath",
+    "liveUrl": "https://example.com/jagannath-live",
+    "fallbackUrl":"",
+    "aartiTimings": ["05:30", "12:30", "20:00"],
+    "templeInfo": {
+      "description": "The Kashi Vishwanath (Vishweshwar) Temple in Varanasi, Uttar Pradesh is home to the Vishwanath Jyotirlinga shrine, which is perhaps the most sacred of Hindu shrines. It is also one of the Padal petra stalam of Vada Naadu mentioned in Thevaaram. The temple is situated in Varanasi, the holiest city for Hindus, where a Hindu is expected to make a pilgrimage at least once in his life, and if possible, also pour the remains of cremated ancestors on the River Ganges. The temple stands on the western bank of the holy river Ganges, and is one of the twelve jyotirlingas. In fact, it is a place where Shakti peeta and jyotirlingam are together. It is the holiest of all Shiva temples. The main deity is known by the name Vishwanath or Vishweshwara meaning Ruler of the universe. The temple town, is considered the oldest living city in the world, with 3500 years of documented history, is also called Kashi.",
+      "officialWebsite": "https://badrinath-kedarnath.gov.in/",
+      "image":"kedarnath.png"
+    }
+  },
+  {
+    "id": 12,
+    "name": "grishneshwar",
+    "liveUrl": "https://example.com/jagannath-live",
+    "fallbackUrl":"",
+    "aartiTimings": ["05:30", "12:30", "20:00"],
+    "templeInfo": {
+      "description": "The Kashi Vishwanath (Vishweshwar) Temple in Varanasi, Uttar Pradesh is home to the Vishwanath Jyotirlinga shrine, which is perhaps the most sacred of Hindu shrines. It is also one of the Padal petra stalam of Vada Naadu mentioned in Thevaaram. The temple is situated in Varanasi, the holiest city for Hindus, where a Hindu is expected to make a pilgrimage at least once in his life, and if possible, also pour the remains of cremated ancestors on the River Ganges. The temple stands on the western bank of the holy river Ganges, and is one of the twelve jyotirlingas. In fact, it is a place where Shakti peeta and jyotirlingam are together. It is the holiest of all Shiva temples. The main deity is known by the name Vishwanath or Vishweshwara meaning Ruler of the universe. The temple town, is considered the oldest living city in the world, with 3500 years of documented history, is also called Kashi.",
+      "officialWebsite": "https://ghrishneshwar.com/",
+      "image":"grishneshwar.png"
+    }
+  }
+]

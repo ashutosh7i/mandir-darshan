@@ -1,0 +1,103 @@
+<template>
+    <div class="min-h-screen bg-background">
+  
+      <!-- Main Content -->
+      <main class="container mx-auto p-6">
+        <div class="text-center mb-4">
+          <h2 class="text-xl font-medium">{{ $t(currentTemple.name) }}</h2>
+        </div>
+  
+        <div class="grid grid-cols-12 gap-6">
+
+          <!-- Temple Info -->
+          <div class="col-span-3">
+            <div class="space-y-4">
+              <div>
+                <h3 class="font-semibold mb-2">{{ $t('templeInfo') }}</h3>
+                <p class="text-sm">{{ currentTemple.templeInfo.description.slice(0, 800) }}{{
+                  currentTemple.templeInfo.description.length > 800 ? '...' : '' }}</p>
+              </div>
+              <div>
+                <h3 class="font-semibold mb-2">{{ $t('templeInfo') }}</h3>
+                <p class="text-sm">{{ currentTemple.templeInfo.additionalInfo }}</p>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Live Feed -->
+          <div class="col-span-6">
+            <div class="aspect-video bg-gray-100 rounded-lg overflow-hidden">
+              <template v-if="currentTemple.video">
+                <video :src="currentTemple.liveUrl" class="w-full h-full" autoplay muted loop playsinline></video>
+              </template>
+              <template v-else>
+                <iframe :src="`${currentTemple.liveUrl}?autoplay=1&mute=1&loop=1`" class="w-full h-full"
+                  title="Youtube Video" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+              </template>
+            </div>
+          </div>
+  
+          <!-- Aarti Times -->
+          <div class="col-span-3">
+            <div class="space-y-4">
+              <div>
+                <h3 class="font-semibold mb-2">{{ $t('aartiTimes') }}</h3>
+                <ul class="space-y-1">
+                  <li v-for="time in currentTemple.aartiTimings" :key="time">
+                    {{ time }}
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="font-semibold">Official website</h3>
+                <a :href="currentTemple.templeInfo.officialWebsite" class="text-primary hover:underline" target="_blank"
+                  rel="noopener noreferrer">
+                  {{currentTemple.templeInfo.officialWebsite}}
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Temple Carousel -->
+        <div class="mt-8 w-full px-4 p-20">
+    <TempleCarousel @templeChange="handleTempleChange" />
+  </div>
+      </main>
+    </div>
+  </template>
+  
+  <script setup>
+  import { ref } from 'vue'
+  import { Button } from '@/components/ui/button'
+  import { ChevronLeftIcon, ChevronRightIcon } from 'lucide-vue-next'
+  const { setLocale } = useI18n()
+  import templeData from '@/lib/data.json'
+  import TempleCarousel from '@/components/TempleCarousel.vue'
+
+  const temples = ref(templeData)
+  const currentIndex = ref(0)
+  const currentTemple = ref(temples.value[currentIndex.value])
+  
+  const nextTemple = () => {
+    currentIndex.value = (currentIndex.value + 1) % temples.value.length
+    currentTemple.value = temples.value[currentIndex.value]
+  }
+  
+  const previousTemple = () => {
+    currentIndex.value = currentIndex.value === 0
+      ? temples.value.length - 1
+      : currentIndex.value - 1
+    currentTemple.value = temples.value[currentIndex.value]
+  }
+  const handleTempleChange = (temple) => {
+  currentTemple.value = temple
+}
+
+const getTempleAtOffset = (offset) => {
+  const targetIndex = (currentIndex.value + offset + temples.value.length) % temples.value.length
+  return temples.value[targetIndex]
+}
+</script>
