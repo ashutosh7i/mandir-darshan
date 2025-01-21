@@ -28,6 +28,8 @@ export default defineI18nConfig(() => ({
         kedarnath:'Shri Kedarnath Temple',
         grishneshwar:'Shri Grishneshwar Temple',
         //pushpwarsha/belpatra option.
+        siddhivinayak:'Shri Siddhivinayak Temple',
+        matavaishnodevi:'Shri Mata Vaishno Devi Temple',
       },
       hi: {
         //general
