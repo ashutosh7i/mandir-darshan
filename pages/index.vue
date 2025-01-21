@@ -1,6 +1,7 @@
 <template>
   <div class="min-h-screen bg-background">
-    <main class="container mx-auto p-4">
+    <LoaderComponent v-if="loading" />
+    <main v-else class="container mx-auto p-4">
       <div class="text-center mb-4">
         <h2 class="text-xl font-medium">{{ $t(currentTemple.name) }}</h2>
       </div>
@@ -51,7 +52,7 @@
               <h3 class="font-semibold">Official website</h3>
               <a :href="currentTemple.templeInfo.officialWebsite" class="text-primary hover:underline" target="_blank"
                 rel="noopener noreferrer">
-                {{currentTemple.templeInfo.officialWebsite}}
+                {{ currentTemple.templeInfo.officialWebsite }}
               </a>
             </div>
           </div>
@@ -67,56 +68,53 @@
 </template>
 
 <script setup>
+// importing
 import { ref, onMounted } from 'vue'
-import { Button } from '@/components/ui/button'
-import { ChevronLeftIcon, ChevronRightIcon } from 'lucide-vue-next'
 import { getStreamForChannel } from '@/utils/Parser.js'
-const { setLocale } = useI18n()
 import templeData from '@/lib/data.json'
 import TempleCarousel from '@/components/TempleCarousel.vue'
+import LoaderComponent from '~/components/LoaderComponent.vue'
 
+// state
 const temples = ref(templeData)
-const currentIndex = ref(0)
-const currentTemple = ref(temples.value[currentIndex.value])
+const currentIndex = ref(0)   //holds index of current temple
+const currentTemple = ref(temples.value[currentIndex.value])  //holds data of current temple
+const loading = ref(true)
 
 const fetchLiveUrls = async () => {
-  const liveTemples = temples.value.filter(temple => temple.live)
+  const liveTemples = temples.value.filter(temple => temple.live)   // fetch temples with live flag
   const channels = liveTemples.map(temple => ({
     channelId: temple.streamInfo.channelId,
     title: temple.streamInfo.title
   }))
-  const apiKey = 'AIzaSyACzmNkYHvGJQNilWXq0I9pIOaVdGFJ3D4' // Replace with your actual API key
+  const apiKey = 'AIzaSyAIybSEBBX3ZX0buaUPOMxcwBiKf3XNZW8' // Replace with your actual API key
   const streams = await getStreamForChannel(channels, apiKey)
   streams.forEach((stream, index) => {
     if (stream) {
       liveTemples[index].liveUrl = `https://www.youtube.com/embed/${stream.id.videoId}`
     }
   })
+  
+  // Update the temples with new live URLs
+  liveTemples.forEach(liveTemple => {
+    const index = temples.value.findIndex(temple => temple.id === liveTemple.id)
+    if (index !== -1) {
+      temples.value[index] = liveTemple
+    }
+  })
 }
 
 onMounted(async () => {
-  await fetchLiveUrls()
-  currentTemple.value = temples.value[currentIndex.value]
+  try {
+    await fetchLiveUrls()
+    currentTemple.value = temples.value[currentIndex.value]
+  } finally {
+    loading.value = false
+  }
 })
-
-const nextTemple = () => {
-  currentIndex.value = (currentIndex.value + 1) % temples.value.length
-  currentTemple.value = temples.value[currentIndex.value]
-}
-
-const previousTemple = () => {
-  currentIndex.value = currentIndex.value === 0
-    ? temples.value.length - 1
-    : currentIndex.value - 1
-  currentTemple.value = temples.value[currentIndex.value]
-}
 
 const handleTempleChange = (temple) => {
   currentTemple.value = temple
 }
 
-const getTempleAtOffset = (offset) => {
-  const targetIndex = (currentIndex.value + offset + temples.value.length) % temples.value.length
-  return temples.value[targetIndex]
-}
 </script>
