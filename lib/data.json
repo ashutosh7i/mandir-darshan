@@ -2,8 +2,11 @@
   {
     "id": 1,
     "name": "somnath",
-    "liveUrl": "https://www.youtube.com/embed/FepTTW5RmYA",
-    "fallbackUrl":"",
+    "live": true,
+    "streamInfo":{
+      "channelId": "UCT1egsvA08YcdMLiEu1DTRg",
+      "title": "🔴 Live Darshan - Shree Somnath Temple, First"
+    },
     "aartiTimings": ["05:30", "12:30", "20:00"],
     "templeInfo": {
       "description": "The Kashi Vishwanath (Vishweshwar) Temple in Varanasi, Uttar Pradesh is home to the Vishwanath Jyotirlinga shrine, which is perhaps the most sacred of Hindu shrines. It is also one of the Padal petra stalam of Vada Naadu mentioned in Thevaaram. The temple is situated in Varanasi, the holiest city for Hindus, where a Hindu is expected to make a pilgrimage at least once in his life, and if possible, also pour the remains of cremated ancestors on the River Ganges. The temple stands on the western bank of the holy river Ganges, and is one of the twelve jyotirlingas. In fact, it is a place where Shakti peeta and jyotirlingam are together. It is the holiest of all Shiva temples. The main deity is known by the name Vishwanath or Vishweshwara meaning Ruler of the universe. The temple town, is considered the oldest living city in the world, with 3500 years of documented history, is also called Kashi.",
@@ -15,8 +18,8 @@
   {
     "id": 2,
     "name": "mallikarjuna",
-    "liveUrl": "https://www.youtube.com/embed/FepTTW5RmYA",
     "live": false,
+    "liveUrl": "https://www.youtube.com/embed/FepTTW5RmYA",
     "fallbackUrl":"",
     "aartiTimings": ["05:30", "12:30", "20:00"],
     "templeInfo": {
@@ -28,8 +31,11 @@
   {
     "id": 3,
     "name": "mahakaal",
-    "liveUrl": "https://www.youtube.com/embed/inv6r8cBOU4",
-    "fallbackUrl":"",
+    "live": true,
+    "streamInfo":{
+      "channelId": "UCEUuwXHmHckwmdANSy4c7Sw",
+      "title": "Shri Mahakaleshwar Mandir Prabandha Samitee -Official Channel"
+    },
     "aartiTimings": ["05:30", "12:30", "20:00"],
     "templeInfo": {
       "description": "The Kashi Vishwanath (Vishweshwar) Temple in Varanasi, Uttar Pradesh is home to the Vishwanath Jyotirlinga shrine, which is perhaps the most sacred of Hindu shrines. It is also one of the Padal petra stalam of Vada Naadu mentioned in Thevaaram. The temple is situated in Varanasi, the holiest city for Hindus, where a Hindu is expected to make a pilgrimage at least once in his life, and if possible, also pour the remains of cremated ancestors on the River Ganges. The temple stands on the western bank of the holy river Ganges, and is one of the twelve jyotirlingas. In fact, it is a place where Shakti peeta and jyotirlingam are together. It is the holiest of all Shiva temples. The main deity is known by the name Vishwanath or Vishweshwara meaning Ruler of the universe. The temple town, is considered the oldest living city in the world, with 3500 years of documented history, is also called Kashi.",
@@ -40,8 +46,8 @@
   {
     "id": 4,
     "name": "omkareshwar",
-    "liveUrl": "https://www.youtube.com/embed/pC4232_RIXI",
     "live":false,
+    "liveUrl": "https://www.youtube.com/embed/pC4232_RIXI",
     "fallbackUrl":"",
     "aartiTimings": ["05:30", "12:30", "20:00"],
     "templeInfo": {
@@ -53,8 +59,11 @@
   {
     "id": 5,
     "name": "baidyanath",
-    "liveUrl": "https://www.youtube.com/embed/Km6D72R8mFU",
-    "live":false,
+    "live": true,
+    "streamInfo":{
+      "channelId": "UCgdw7vXazBgac1V3VSi_0sw",
+      "title": "LIVE : Baba Baidyanath Dham Live Darshan"
+    },
     "fallbackUrl":"",
     "aartiTimings": ["05:30", "12:30", "20:00"],
     "templeInfo": {
@@ -146,6 +155,61 @@
       "description": "The Kashi Vishwanath (Vishweshwar) Temple in Varanasi, Uttar Pradesh is home to the Vishwanath Jyotirlinga shrine, which is perhaps the most sacred of Hindu shrines. It is also one of the Padal petra stalam of Vada Naadu mentioned in Thevaaram. The temple is situated in Varanasi, the holiest city for Hindus, where a Hindu is expected to make a pilgrimage at least once in his life, and if possible, also pour the remains of cremated ancestors on the River Ganges. The temple stands on the western bank of the holy river Ganges, and is one of the twelve jyotirlingas. In fact, it is a place where Shakti peeta and jyotirlingam are together. It is the holiest of all Shiva temples. The main deity is known by the name Vishwanath or Vishweshwara meaning Ruler of the universe. The temple town, is considered the oldest living city in the world, with 3500 years of documented history, is also called Kashi.",
       "officialWebsite": "https://ghrishneshwar.com/",
       "image":"grishneshwar.png"
+    }
+  },
+  {
+    "id": 13,
+    "name": "siddhivinayak",
+    "live": true,
+    "streamInfo":{
+      "channelId": "UCF9FdiMBENIbM6jb44zWmCQ",
+      "title": "Shree Siddhivinayak Ganapati Temple Trust Live Stream"
+    },
+    "aartiTimings": ["05:00", "12:00", "19:00"],
+    "templeInfo": {
+      "description": "Shri Siddhivinayak Temple is a Hindu temple dedicated to Lord Shri Ganesh. It is located in Prabhadevi, Mumbai, Maharashtra.",
+      "officialWebsite": "https://www.siddhivinayak.org/",
+      "image":"siddhivinayak.png"
+    }
+  },
+  {
+    "id": 14,
+    "name": "Shri Jagannath Temple",
+    "liveUrl": "https://example.com/jagannath-live",
+    "aartiTimings": ["05:30", "12:30", "20:00"],
+    "templeInfo": {
+      "history": "Shri Jagannath Temple is an important Hindu temple dedicated to Jagannath, a form of Vishnu, in Puri, Odisha, India.",
+      "officialWebsite": "https://jagannath.nic.in/"
+    }
+  },
+  {
+    "id": 15,
+    "name": "matavaishnodevi",
+    "live": true,
+    "streamInfo":{
+      "channelId": "UCziZy6xAlJWPzgIY4duxAeQ",
+      "title": "Live: Maa Vaishno Devi Aarti From Bhawan"
+    },
+    "aartiTimings": ["05:30", "12:30", "20:00"],
+    "templeInfo": {
+      "description": "The Kashi Vishwanath (Vishweshwar) Temple in Varanasi, Uttar Pradesh is home to the Vishwanath Jyotirlinga shrine, which is perhaps the most sacred of Hindu shrines. It is also one of the Padal petra stalam of Vada Naadu mentioned in Thevaaram. The temple is situated in Varanasi, the holiest city for Hindus, where a Hindu is expected to make a pilgrimage at least once in his life, and if possible, also pour the remains of cremated ancestors on the River Ganges. The temple stands on the western bank of the holy river Ganges, and is one of the twelve jyotirlingas. In fact, it is a place where Shakti peeta and jyotirlingam are together. It is the holiest of all Shiva temples. The main deity is known by the name Vishwanath or Vishweshwara meaning Ruler of the universe. The temple town, is considered the oldest living city in the world, with 3500 years of documented history, is also called Kashi.",
+      "officialWebsite": "https://www.maavaishnodevi.org/",
+      "image":"matavaishnodevi.png"
+    }
+  },
+  {
+    "id": 15,
+    "name": "khajrana",
+    "live": true,
+    "streamInfo":{
+      "channelId": "UCKulZy7GUcfLE8ZaYi5V_kg",
+      "title": "Khajrana Ganesh Mandir Live Darsha Live Stream"
+    },
+    "aartiTimings": ["05:30", "12:30", "20:00"],
+    "templeInfo": {
+      "description": "The Kashi Vishwanath (Vishweshwar) Temple in Varanasi, Uttar Pradesh is home to the Vishwanath Jyotirlinga shrine, which is perhaps the most sacred of Hindu shrines. It is also one of the Padal petra stalam of Vada Naadu mentioned in Thevaaram. The temple is situated in Varanasi, the holiest city for Hindus, where a Hindu is expected to make a pilgrimage at least once in his life, and if possible, also pour the remains of cremated ancestors on the River Ganges. The temple stands on the western bank of the holy river Ganges, and is one of the twelve jyotirlingas. In fact, it is a place where Shakti peeta and jyotirlingam are together. It is the holiest of all Shiva temples. The main deity is known by the name Vishwanath or Vishweshwara meaning Ruler of the universe. The temple town, is considered the oldest living city in the world, with 3500 years of documented history, is also called Kashi.",
+      "officialWebsite": "https://www.maavaishnodevi.org/",
+      "image":"matavaishnodevi.png"
     }
   }
 ]

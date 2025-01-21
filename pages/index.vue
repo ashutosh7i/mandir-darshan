@@ -67,9 +67,10 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import { Button } from '@/components/ui/button'
 import { ChevronLeftIcon, ChevronRightIcon } from 'lucide-vue-next'
+import { getStreamForChannel } from '@/utils/Parser.js'
 const { setLocale } = useI18n()
 import templeData from '@/lib/data.json'
 import TempleCarousel from '@/components/TempleCarousel.vue'
@@ -77,6 +78,26 @@ import TempleCarousel from '@/components/TempleCarousel.vue'
 const temples = ref(templeData)
 const currentIndex = ref(0)
 const currentTemple = ref(temples.value[currentIndex.value])
+
+const fetchLiveUrls = async () => {
+  const liveTemples = temples.value.filter(temple => temple.live)
+  const channels = liveTemples.map(temple => ({
+    channelId: temple.streamInfo.channelId,
+    title: temple.streamInfo.title
+  }))
+  const apiKey = 'AIzaSyACzmNkYHvGJQNilWXq0I9pIOaVdGFJ3D4' // Replace with your actual API key
+  const streams = await getStreamForChannel(channels, apiKey)
+  streams.forEach((stream, index) => {
+    if (stream) {
+      liveTemples[index].liveUrl = `https://www.youtube.com/embed/${stream.id.videoId}`
+    }
+  })
+}
+
+onMounted(async () => {
+  await fetchLiveUrls()
+  currentTemple.value = temples.value[currentIndex.value]
+})
 
 const nextTemple = () => {
   currentIndex.value = (currentIndex.value + 1) % temples.value.length
@@ -99,4 +120,3 @@ const getTempleAtOffset = (offset) => {
   return temples.value[targetIndex]
 }
 </script>
-
