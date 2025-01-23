@@ -110,9 +110,10 @@ const onSlideChange = (swiper) => {
       >
         <div class="relative">
           <img 
-            :src="`/images/${temple.templeInfo.image}`" 
+          :src="`http://localhost:5000/api/images/${temple.templeInfo.image}`" 
             :alt="temple.name" 
             class="w-full h-[200px] md:h-[250px] object-cover rounded-lg"
+            
           />
           <div class="absolute bottom-0 left-0 right-0 bg-black/50 text-white p-2 text-center text-sm rounded-b-lg">
             {{ $t(temple.name) }}
@@ -131,41 +132,47 @@ const onSlideChange = (swiper) => {
 </template>
 
 <script setup>
-import { Swiper, SwiperSlide } from 'swiper/vue'
-import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules'
-import { Button } from '@/components/ui/button'
-import { ChevronLeftIcon, ChevronRightIcon } from 'lucide-vue-next'
-import templeData from '@/lib/data.json'
-import { ref, onMounted, watch } from 'vue'
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
+import { Button } from '@/components/ui/button';
+import { ChevronLeftIcon, ChevronRightIcon } from 'lucide-vue-next';
+import { ref, onMounted, watch } from 'vue';
+import { useDataStore } from '@/store/data';
 
-import 'swiper/css'
-import 'swiper/css/effect-coverflow'
-import 'swiper/css/pagination'
-import 'swiper/css/navigation'
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
-const temples = ref(templeData)
-const modules = [EffectCoverflow, Pagination, Navigation]
+const dataStore = useDataStore();
+const temples = ref([]);
 
-const slidesPerView = ref(5)
+watch(() => dataStore.data, (newData) => {
+  temples.value = newData;
+}, { immediate: true });
+
+const modules = [EffectCoverflow, Pagination, Navigation];
+
+const slidesPerView = ref(5);
 
 const updateSlidesPerView = () => {
-  slidesPerView.value = window.innerWidth < 768 ? 3 : 5
-}
+  slidesPerView.value = window.innerWidth < 768 ? 3 : 5;
+};
 
 onMounted(() => {
-  updateSlidesPerView()
-  window.addEventListener('resize', updateSlidesPerView)
-})
+  updateSlidesPerView();
+  window.addEventListener('resize', updateSlidesPerView);
+});
 
-watch(() => window.innerWidth, updateSlidesPerView)
+watch(() => window.innerWidth, updateSlidesPerView);
 
-const emit = defineEmits(['templeChange'])
+const emit = defineEmits(['templeChange']);
 
 const onSwiper = (swiper) => {
   // Swiper instance initialization
-}
+};
 
 const onSlideChange = (swiper) => {
-  emit('templeChange', temples.value[swiper.realIndex])
-}
+  emit('templeChange', temples.value[swiper.realIndex]);
+};
 </script>
