@@ -110,7 +110,7 @@ const onSlideChange = (swiper) => {
       >
         <div class="relative">
           <img 
-          :src="`http://13.200.222.4:9826/api/images/${temple.templeInfo.image}`" 
+          :src="`https://mandir.ashutosh7i.dev/api/images/${temple.templeInfo.image}`" 
             :alt="temple.name" 
             class="w-full h-[150px] md:h-[170px] object-cover rounded-lg"
             

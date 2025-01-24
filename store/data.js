@@ -13,7 +13,7 @@ export const useDataStore = defineStore('data', () => {
     loading.value = true;
     error.value = null;
     try {
-      const response = await fetch('http://13.200.222.4:9826/api/temples');
+      const response = await fetch('https://mandir.ashutosh7i.dev/api/temples');
       const result = await response.json();
       data.value = result;
       isInitialized.value = true;
