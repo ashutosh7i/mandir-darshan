@@ -3,10 +3,14 @@ import { ref, onMounted, watch } from 'vue';
 import { useDataStore } from '@/store/data';
 import TempleCarousel from '@/components/TempleCarousel.vue';
 import LoaderComponent from '@/components/LoaderComponent.vue';
+import WelcomeCard from '~/components/WelcomeCard.vue';
+import { useI18n } from 'vue-i18n';
 
 const dataStore = useDataStore();
 const currentIndex = ref(0);
 const currentTemple = ref(null);
+const { locale } = useI18n();
+const showWelcomeCard = ref(true);
 
 onMounted(async () => {
   await dataStore.fetchData();
@@ -27,8 +31,11 @@ const handleTempleChange = (temple) => {
   <div class="min-h-screen bg-background">
     <LoaderComponent v-if="dataStore.loading || !currentTemple" />
     <main v-else-if="currentTemple" class="container mx-auto p-4">
+      <div v-if="showWelcomeCard" class="backdrop">
+        <WelcomeCard class="floating-card" @close="showWelcomeCard = false" />
+      </div>
       <div class="text-center mb-4">
-        <h2 class="text-xl font-medium">{{ $t(currentTemple.name) }}</h2>
+        <h2 class="text-2xl font-medium">{{ $t(currentTemple.name) }}</h2>
       </div>
 
       <div class="flex flex-col lg:grid lg:grid-cols-12 gap-6">
@@ -39,13 +46,11 @@ const handleTempleChange = (temple) => {
             <div>
               <h3 class="font-semibold mb-2">{{ $t('templeInfo') }}</h3>
               <p class="text-sm">
-                {{ currentTemple.templeInfo.description.slice(0, 800) }}{{ currentTemple.templeInfo.description.length > 800 ? '...' : '' }}
+                {{ locale === 'hi' ? currentTemple.templeInfo.hi.slice(0, 800) : currentTemple.templeInfo.description.slice(0, 800) }}
+                {{ (locale === 'hi' ? currentTemple.templeInfo.hi.length : currentTemple.templeInfo.description.length) > 800 ? '...' : '' }}
               </p>
             </div>
-            <div>
-              <h3 class="font-semibold mb-2">{{ $t('templeInfo') }}</h3>
-              <p class="text-sm">{{ currentTemple.templeInfo.additionalInfo }}</p>
-            </div>
+            
           </div>
         </div>
 
@@ -84,3 +89,25 @@ const handleTempleChange = (temple) => {
     </main>
   </div>
 </template>
+
+<style scoped>
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.floating-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+</style>

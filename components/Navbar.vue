@@ -1,40 +1,3 @@
-<!-- <template>
-   <header class="border-b px-6 py-4 flex items-center justify-between">
-      <h1 class="text-xl font-semibold" @click="redirect('/')">🛕{{ $t('mandirDarshan') }}✨</h1>
-      <div class="flex items-center gap-4">
-        <Button variant="ghost" class="text-sm" @click="handleQuickDarshan">
-          {{ $t('startQuickDarshan') }}
-        </Button>
-        <div class="flex items-center gap-2">
-          <Button variant="ghost" class="text-sm" >➕{{ $t('addMoreTemples') }}</Button>
-          <span>|</span>
-          <Button variant="ghost" class="text-sm" @click="redirect('/about')">🤔{{ $t('about') }}</Button>
-          <span>|</span>
-          <Button variant="ghost" class="text-sm" @click="redirect('https://github.com/ashutosh7i')">📞{{ $t('contact') }}</Button>
-          <LanguageSwitcher />
-        </div>
-      </div>
-      
-    </header>
-    
-</template>
-
-
-<script setup>
-const { setLocale } = useI18n()
-
-const handleQuickDarshan = () => {
-  // Add quick darshan logic
-}
-
-const redirect = (path) => {
-  window.location.href = path;
-}
-
-
-</script> -->
-
-
 <template>
   <header class="border-b px-4 py-3 flex items-center justify-between">
     <h1 class="text-lg font-semibold flex-shrink-0" @click="redirect('/')">🛕{{ $t('mandirDarshan') }}✨</h1>
@@ -45,7 +8,7 @@ const redirect = (path) => {
         {{ $t('startQuickDarshan') }}
       </Button>
       <div class="flex items-center gap-2">
-        <Button variant="ghost" class="text-sm">➕{{ $t('addMoreTemples') }}</Button>
+        <Button variant="ghost" class="text-sm" @click="handleAddMoreTemples">➕{{ $t('addMoreTemples') }}</Button>
         <span>|</span>
         <Button variant="ghost" class="text-sm" @click="redirect('/about')">🤔{{ $t('about') }}</Button>
         <span>|</span>
@@ -64,7 +27,7 @@ const redirect = (path) => {
     <div v-if="menuOpen" class="absolute top-12 left-0 w-full bg-white shadow-md p-4 z-50 md:hidden">
       <ul class="space-y-2">
         <li><Button variant="ghost" class="w-full text-left" @click="handleQuickDarshan">{{ $t('startQuickDarshan') }}</Button></li>
-        <li><Button variant="ghost" class="w-full text-left">➕{{ $t('addMoreTemples') }}</Button></li>
+        <li><Button variant="ghost" class="w-full text-left" @click="handleAddMoreTemples">➕{{ $t('addMoreTemples') }}</Button></li>
         <li><Button variant="ghost" class="w-full text-left" @click="redirect('/about')">🤔{{ $t('about') }}</Button></li>
         <li><Button variant="ghost" class="w-full text-left" @click="redirect('https://ashutosh7i.dev')">📞{{ $t('contact') }}</Button></li>
       </ul>
@@ -82,7 +45,11 @@ const toggleMenu = () => {
 };
 
 const handleQuickDarshan = () => {
-  // Add quick darshan logic
+  alert('Kindly wait, this feature will be added soon 🙏 इस सुविधा को जल्द ही जोड़ा जाएगा 🙏');
+};
+
+const handleAddMoreTemples = () => {
+  alert('Kindly wait, this feature will be added soon 🙏 इस सुविधा को जल्द ही जोड़ा जाएगा 🙏');
 };
 
 const redirect = (path) => {

@@ -110,9 +110,9 @@ const onSlideChange = (swiper) => {
       >
         <div class="relative">
           <img 
-          :src="`http://localhost:5000/api/images/${temple.templeInfo.image}`" 
+          :src="`http://13.200.222.4:9826/api/images/${temple.templeInfo.image}`" 
             :alt="temple.name" 
-            class="w-full h-[200px] md:h-[250px] object-cover rounded-lg"
+            class="w-full h-[150px] md:h-[170px] object-cover rounded-lg"
             
           />
           <div class="absolute bottom-0 left-0 right-0 bg-black/50 text-white p-2 text-center text-sm rounded-b-lg">

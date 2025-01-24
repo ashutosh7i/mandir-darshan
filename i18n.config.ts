@@ -29,7 +29,9 @@ export default defineI18nConfig(() => ({
         grishneshwar:'Shri Grishneshwar Temple',
         //pushpwarsha/belpatra option.
         siddhivinayak:'Shri Siddhivinayak Temple',
-        matavaishnodevi:'Shri Mata Vaishno Devi Temple',
+        jagannath:'Shri Jagannath Temple',
+        khajrana:'Shri Khajrana Ganesh Temple',
+        
       },
       hi: {
         //general
@@ -56,6 +58,10 @@ export default defineI18nConfig(() => ({
         trimbakeshwar:'श्री त्र्यंबकेश्वर मंदिर',
         kedarnath:'श्री केदारनाथ मंदिर',
         grishneshwar:'श्री घृष्णेश्वर मन्दिर',
+        //
+        siddhivinayak:'श्री सिद्धिविनायक मंदिर',
+        jagannath:'श्री जागन्नाथ मंदिर',
+        khajrana:'श्री खजराना गणेश मंदिर', 
       }
     }
   }))
