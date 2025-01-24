@@ -35,7 +35,7 @@ const handleTempleChange = (temple) => {
         <WelcomeCard class="floating-card" @close="showWelcomeCard = false" />
       </div>
       <div class="text-center mb-4">
-        <h2 class="text-2xl font-medium">{{ $t(currentTemple.name) }}</h2>
+        <h2 class="text-2xl font-medium">{{ $t(currentTemple.name) }} {{ currentTemple.live ? '(LIVE)' : '' }}</h2>
       </div>
 
       <div class="flex flex-col lg:grid lg:grid-cols-12 gap-6">
