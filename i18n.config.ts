@@ -34,7 +34,7 @@ export default defineI18nConfig(() => ({
         matavaishnodevi:'Shri Matavaishnodevi Temple',
         sanwaliaji:'Shri Sanwalia Seth Temple',
         dwarkadhish:'Shri Dwarkadhish Temple',
-        kashthbhanjanhanumanji:'Shri Kashthbhanjan Hanumanji Temple',
+        kasthbhanjanhanumanji:'Shri Kashthbhanjan Hanumanji Temple',
         govinddevji:'Shri Govinddevji Temple',
         
       },
@@ -70,7 +70,7 @@ export default defineI18nConfig(() => ({
         matavaishnodevi:'श्री माता वैष्णो देवी मंदिर',
         sanwaliaji:'श्री सांवलिया सेठ मंदिर',
         dwarkadhish:'श्री द्वारकाधीश मंदिर',
-        kashthbhanjanhanumanji:'श्री कष्‍टभंजन हनुमान जी मंदिर',
+        kasthbhanjanhanumanji:'श्री कष्‍टभंजन हनुमान जी मंदिर',
         govinddevji:'श्री गोविंददेव जी मंदिर',
       }
     }
