@@ -4,6 +4,7 @@ import { useDataStore } from '@/store/data';
 import TempleCarousel from '@/components/TempleCarousel.vue';
 import LoaderComponent from '@/components/LoaderComponent.vue';
 import WelcomeCard from '~/components/WelcomeCard.vue';
+import AartiTimes from '~/components/AartiTimes.vue';
 import { useI18n } from 'vue-i18n';
 
 const dataStore = useDataStore();
@@ -39,23 +40,8 @@ const handleTempleChange = (temple) => {
       </div>
 
       <div class="flex flex-col lg:grid lg:grid-cols-12 gap-6">
-
-        <!-- Temple Info -->
-        <div class="order-3 mt-4 lg:mt-0 lg:col-span-3 lg:order-1">
-          <div class="space-y-4">
-            <div>
-              <h3 class="font-semibold mb-2">{{ $t('templeInfo') }}</h3>
-              <p class="text-sm">
-                {{ locale === 'hi' ? currentTemple.templeInfo.hi.slice(0, 800) : currentTemple.templeInfo.description.slice(0, 800) }}
-                {{ (locale === 'hi' ? currentTemple.templeInfo.hi.length : currentTemple.templeInfo.description.length) > 800 ? '...' : '' }}
-              </p>
-            </div>
-            
-          </div>
-        </div>
-
         <!-- Live Feed -->
-        <div class="order-1 lg:col-span-6 lg:order-2">
+        <div class="order-1 lg:order-2 lg:col-span-6">
           <div class="aspect-video bg-gray-100 rounded-lg overflow-hidden">
             <template v-if="currentTemple.video">
               <video :src="currentTemple.liveUrl" class="w-full h-full" autoplay muted loop playsinline></video>
@@ -73,17 +59,27 @@ const handleTempleChange = (temple) => {
           </div>
         </div>
 
-        <!-- Aarti Times and Website -->
-        <div class="order-4 mt-4 lg:mt-0 lg:col-span-3 lg:order-3">
-          <AartiTimes :temple="currentTemple" />
-  
-            
-          
+        <!-- Temple Carousel -->
+        <div class="order-2 lg:order-4 mt-4 lg:mt-8 lg:col-span-12">
+          <TempleCarousel @templeChange="handleTempleChange" />
         </div>
 
-        <!-- Temple Carousel -->
-        <div class="order-2 mt-4 lg:mt-8 lg:col-span-12 lg:order-4">
-          <TempleCarousel @templeChange="handleTempleChange" />
+        <!-- Aarti Times -->
+        <div class="order-3 lg:order-3 mt-4 lg:mt-0 lg:col-span-3">
+          <AartiTimes :temple="currentTemple" />
+        </div>
+
+        <!-- Temple Info -->
+        <div class="order-4 lg:order-1 mt-4 lg:mt-0 lg:col-span-3">
+          <div class="space-y-4">
+            <div>
+              <h3 class="font-semibold mb-2">{{ $t('templeInfo') }}</h3>
+              <p class="text-sm">
+                {{ locale === 'hi' ? currentTemple.templeInfo.hi.slice(0, 800) : currentTemple.templeInfo.description.slice(0, 800) }}
+                {{ (locale === 'hi' ? currentTemple.templeInfo.hi.length : currentTemple.templeInfo.description.length) > 800 ? '...' : '' }}
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </main>
@@ -111,3 +107,4 @@ const handleTempleChange = (temple) => {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 </style>
+
