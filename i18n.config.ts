@@ -36,6 +36,7 @@ export default defineI18nConfig(() => ({
         dwarkadhish:'Shri Dwarkadhish Temple',
         kasthbhanjanhanumanji:'Shri Kashthbhanjan Hanumanji Temple',
         govinddevji:'Shri Govinddevji Temple',
+        baglamukhimataji: 'Shri Baglamukhi Mataji Temple',
         
       },
       hi: {
@@ -72,6 +73,7 @@ export default defineI18nConfig(() => ({
         dwarkadhish:'श्री द्वारकाधीश मंदिर',
         kasthbhanjanhanumanji:'श्री कष्‍टभंजन हनुमान जी मंदिर',
         govinddevji:'श्री गोविंददेव जी मंदिर',
+        baglamukhimataji: 'श्री बगलामुखी माताजी मंदिर',
       }
     }
   }))
